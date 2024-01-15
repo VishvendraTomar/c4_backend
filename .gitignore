@@ -6,7 +6,9 @@
 .env
 # Files for the ART/Dalvik VM
 *.dex
-node_modules
+.env
+node_modules/
+
 # Java class files
 *.class
 
