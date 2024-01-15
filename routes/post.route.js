@@ -2,6 +2,7 @@ const { Router } = require("express");
 const { PostModel } = require("../models/post.model");
 const postRouter = Router();
 
+
 postRouter.get("/", async (req, res) => {
   try {
     const { pageNo, limit, minComments, maxComments, device1, device2 } = req.query;

@@ -6,6 +6,7 @@ const { userRouter } = require("./routes/user.route");
 const { postRouter } = require("./routes/post.route");
 const { auth } = require("./middlewares/Auth.middleware");
 
+
 require("dotenv").config();
 const app = express();
 app.use(express.json());
@@ -17,7 +18,7 @@ app.get("/" , (req,res)=>{
 app.use("/users", userRouter);
 app.use("/posts", auth , postRouter);
 
-app.listen(8080, async () => {
+app.listen(8081, async () => {
   try {
     await connection;
     console.log("Db connected");
