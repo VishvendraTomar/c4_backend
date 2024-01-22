@@ -43,6 +43,7 @@ userRouter.post("/login", async (req, res) => {
         if (result) {
           const token = jwt.sign({ userID: user._id }, process.env.SECRET);
           res.status(200).json({ msg: "User Logged in Successful", token });
+          console.log(token)
         } else {
           res.status(200).json({ msg: "Incorrect Password" });
         }
